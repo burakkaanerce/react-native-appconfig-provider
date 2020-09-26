@@ -117,6 +117,9 @@ export default (props) => {
           DARK / LIGHT MODE
         </Text>
       </TouchableOpacity>
+      <Text style={theme.styles.textCenter}>
+        {dictionary.helloWorld}
+      </Text>
     </View>
   )
 };
