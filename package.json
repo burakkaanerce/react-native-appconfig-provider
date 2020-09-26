@@ -1,0 +1,29 @@
+{
+  "name": "react-native-appconfig-provider",
+  "version": "1.0.0",
+  "description": "react-native appconfig provider is tool to control theme and language configurations.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/burakkaanerce/react-native-appconfig-provider.git"
+  },
+  "keywords": [
+    "react-native",
+    "provider",
+    "context",
+    "hooks",
+    "language",
+    "dictionary",
+    "theme",
+    "theming"
+  ],
+  "author": "burakkaanerce",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/burakkaanerce/react-native-appconfig-provider/issues"
+  },
+  "homepage": "https://github.com/burakkaanerce/react-native-appconfig-provider#readme"
+}
