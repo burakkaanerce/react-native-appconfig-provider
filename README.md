@@ -89,13 +89,13 @@ export default (props) => {
   const { theme, dictionary, dictionaryMode, mode, onToggleMode, updateDict } = useContext(AppConfigContext);
 
   return (
-    <View>
+    <View style={{ backgroundColor: theme.colors.background }}>
       <TouchableOpacity 
         onPress={() => {
           updateDict('EN');
         }}
       >
-        <Text>
+        <Text style={{ color: theme.colors.primary }}>
           ENGLISH
         </Text>
       </TouchableOpacity>
@@ -104,7 +104,7 @@ export default (props) => {
           updateDict('TR');
         }}
       >
-        <Text>
+        <Text style={{ color: theme.colors.primary }}>
           TURKISH
         </Text>
       </TouchableOpacity>
@@ -113,7 +113,7 @@ export default (props) => {
           onToggleMode();
         }}
       >
-        <Text>
+        <Text style={{ color: theme.colors.primary }}>
           DARK / LIGHT MODE
         </Text>
       </TouchableOpacity>
