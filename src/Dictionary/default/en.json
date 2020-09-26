@@ -1,0 +1,7 @@
+{
+  "name": "English",
+  "short": "EN",
+  "words": {
+    "helloWorld": "Hello World !"
+  }
+}
