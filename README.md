@@ -6,8 +6,16 @@ This provider puts the application under one roof and prepares a suitable enviro
 
 ```bash
 $ npm install --save react-native-appconfig-provider
-
+OR
 $ yarn add react-native-appconfig-provider
+```
+
+This provider is using AsyncStorage to store theme or dictionary mode that is using in App. So,
+
+```bash
+$ npm install --save @react-native-community/async-storage
+OR
+$ yarn add @react-native-community/async-storage
 ```
 
 ## Usage
