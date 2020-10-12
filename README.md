@@ -28,6 +28,20 @@ import AppConfigContextProvider from 'react-native-appconfig-provider';
 
 export default () => (
   <AppConfigContextProvider
+  
+    /*  Default:
+        {
+          buttons: {
+            primary: '#fff',
+            background: '#333333',
+          },
+          labels: {
+            text: '#123123'
+          }
+        }
+    */
+    colors={Object}
+
     /*  Default:
         {
           colors: {
