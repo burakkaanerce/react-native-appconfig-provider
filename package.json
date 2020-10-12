@@ -1,6 +1,6 @@
 {
   "name": "react-native-appconfig-provider",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "react-native appconfig provider is tool to control theme and language configurations.",
   "main": "src/index.js",
   "files": [

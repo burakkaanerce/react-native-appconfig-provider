@@ -12,8 +12,9 @@ import Dictionary from './Dictionary';
 const AppConfigContext = createContext();
 
 export default (props) => {
-  const { lightMode: LightModeFromProps, darkMode: DarkModeFromProps, dictionary: DictionaryFromProps, styles: StylesFromProps } = props;
+  const { colors: ColorsFromProps, lightMode: LightModeFromProps, darkMode: DarkModeFromProps, dictionary: DictionaryFromProps, styles: StylesFromProps } = props;
 
+  const defaultColors = ColorsFromProps || {};
   const defaultLightMode = LightModeFromProps || LightMode;
   const defaultDarkMode = DarkModeFromProps || DarkMode;
   const defaultDictionary = DictionaryFromProps && DictionaryFromProps.length > 0 && DictionaryFromProps[0].words ? DictionaryFromProps : Dictionary;
@@ -56,12 +57,22 @@ export default (props) => {
     bootstrapAsync();
   }, []);
 
+  const { colors, otherThemeProps } = theme;
+
+  const stateTheme = {
+    colors: {
+      ...colors,
+      ...defaultColors
+    },
+    ...otherThemeProps
+  }
+
   const state = {
     dictionary,
     dictionaryMode,
     theme: {
-      styles: StyleSheet.create(defaultStyles(theme)),
-      ...theme
+      styles: StyleSheet.create(defaultStyles(stateTheme)),
+      ...stateTheme
     },
     mode,
     updateTheme: (newTheme) => {
@@ -91,6 +102,7 @@ export default (props) => {
   const {
     children
   } = props;
+
   return (
     <AppConfigContext.Provider
       value={state}
